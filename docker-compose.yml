@@ -1,0 +1,9 @@
+services:
+  php4:
+    image: mareksr/php4:4.4.9 # Apache 2 + PHP 4.4.9 (CentOS base)
+    container_name: php4
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/usr/local/apache2/htdocs
+    restart: unless-stopped
